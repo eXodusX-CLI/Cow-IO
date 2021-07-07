@@ -1,0 +1,27 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GameObjectType = exports.gameObjectSizes = void 0;
+var GameObjectType;
+(function (GameObjectType) {
+    GameObjectType[GameObjectType["Tree"] = 0] = "Tree";
+    GameObjectType[GameObjectType["StoneMine"] = 1] = "StoneMine";
+    GameObjectType[GameObjectType["GoldMine"] = 3] = "GoldMine";
+    GameObjectType[GameObjectType["Spike"] = 4] = "Spike";
+    GameObjectType[GameObjectType["GreaterSpike"] = 5] = "GreaterSpike";
+    GameObjectType[GameObjectType["PoisonSpike"] = 6] = "PoisonSpike";
+    GameObjectType[GameObjectType["SpinningSpike"] = 7] = "SpinningSpike";
+    GameObjectType[GameObjectType["WoodWall"] = 8] = "WoodWall";
+    GameObjectType[GameObjectType["StoneWall"] = 9] = "StoneWall";
+    GameObjectType[GameObjectType["CastleWall"] = 10] = "CastleWall";
+    GameObjectType[GameObjectType["Sapling"] = 11] = "Sapling";
+    GameObjectType[GameObjectType["Mine"] = 2] = "Mine";
+    GameObjectType[GameObjectType["Bush"] = 1] = "Bush";
+    GameObjectType[GameObjectType["Cactus"] = 2] = "Cactus";
+})(GameObjectType || (GameObjectType = {}));
+exports.GameObjectType = GameObjectType;
+var gameObjectSizes = {};
+exports.gameObjectSizes = gameObjectSizes;
+gameObjectSizes[GameObjectType.Tree] = [150, 160, 165, 175];
+gameObjectSizes[GameObjectType.Bush] = gameObjectSizes[GameObjectType.Mine] = [80, 85, 90];
+gameObjectSizes[GameObjectType.GoldMine] = [80];
+exports.gameObjectSizes = gameObjectSizes = Object.freeze(gameObjectSizes);
